@@ -1,0 +1,169 @@
+#include <TXLib.h>
+
+//-----------------------------------------------------------------------------
+
+void useDefault (COLORREF color, int r, HDC dc);
+
+void drawDefault (COLORREF color, int r);
+
+void useLine (COLORREF color, int r, HDC dc);
+
+void drawLine (COLORREF color, int r);
+
+void useRectangle (COLORREF color, int r, HDC dc);
+
+void drawRectangle (COLORREF color, int r);
+
+//-----------------------------------------------------------------------------
+
+void useDefault (COLORREF color, int r, HDC dc)
+
+{
+
+    POINT OldmPos = txMousePos ();
+
+    while (true)
+
+    {
+
+        POINT mPos = txMousePos ();
+
+        if (txMouseButtons () == 1)
+
+        {
+
+            txSetColor (color, r, dc);
+            txSetFillColor (color, dc);
+
+            txLine (OldmPos.x, OldmPos.y, mPos.x, mPos.y, dc);
+
+            OldmPos = mPos;
+
+        }
+
+        else
+
+        {
+
+            return;
+
+        }
+
+        txBitBlt (txDC (), 0, 0, 0, 0, dc, 0, 0);
+
+        txSleep (1);
+
+    }
+
+}
+
+//-----------------------------------------------------------------------------
+
+void drawDefault (COLORREF color, int r)
+
+{
+
+    POINT mPos = txMousePos ();
+
+    txSetColor (color);
+    txSetFillColor (color);
+
+    txEllipse (mPos.x - r / 2, mPos.y - r / 2, mPos.x + r / 2, mPos.y + r / 2);
+
+}
+
+//-----------------------------------------------------------------------------
+
+void useLine (COLORREF color, int r, HDC dc)
+
+{
+
+    POINT firstPos = txMousePos ();
+    POINT mPos;
+
+    while (txMouseButtons() == 1)
+
+    {
+
+        txBitBlt (txDC (), 0, 0, 0, 0, dc, 0, 0);
+
+        mPos = txMousePos ();
+
+        txSetColor (color, r, txDC ());
+        txSetFillColor (color, txDC ());
+
+        txLine (firstPos.x, firstPos.y, mPos.x, mPos.y, txDC ());
+
+        txSleep (1);
+
+    }
+
+    mPos = txMousePos ();
+
+    txSetColor (color, r, dc);
+    txSetFillColor (color, dc);
+
+    txLine (firstPos.x, firstPos.y, mPos.x, mPos.y, dc);
+
+}
+
+void drawLine (COLORREF color, int r)
+
+{
+
+    POINT mPos = txMousePos ();
+
+    txSetColor (color);
+    txSetFillColor (color);
+
+    txEllipse (mPos.x - r / 2, mPos.y - r / 2, mPos.x + r / 2, mPos.y + r / 2);
+
+}
+
+//-----------------------------------------------------------------------------
+
+void useRectangle (COLORREF color, int r, HDC dc)
+
+{
+
+    POINT firstPos = txMousePos ();
+    POINT mPos;
+
+    while (txMouseButtons() == 1)
+
+    {
+
+        txBitBlt (txDC (), 0, 0, 0, 0, dc, 0, 0);
+
+        mPos = txMousePos ();
+
+        txSetColor (color);
+        txSetFillColor (color, txDC ());
+
+        txRectangle (firstPos.x, firstPos.y, mPos.x, mPos.y, txDC ());
+
+        txSleep (1);
+
+    }
+
+    mPos = txMousePos ();
+
+    txSetColor (color, 0, dc);
+    txSetFillColor (color, dc);
+
+    txRectangle (firstPos.x, firstPos.y, mPos.x, mPos.y, dc);
+
+}
+
+void drawRectangle (COLORREF color, int r)
+
+{
+
+    POINT mPos = txMousePos ();
+
+    txSetColor (color);
+    txSetFillColor (color);
+
+    txRectangle (mPos.x - 2, mPos.y - 2, mPos.x + 2, mPos.y + 2);
+
+}

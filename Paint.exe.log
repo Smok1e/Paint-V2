@@ -1,0 +1,672 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76A4AE54 в функции ungetwc(). Попытка записать данные по адресу 0x004C2248. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300], Instance: 0x004FF2E4 (32-bit), Flags: Cmdre0, Thread: 0x28AC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76A4AE54 in C:\Windows\System32\msvcrt.dll: ungetwc()
+# 1 0x76A4B34E in C:\Windows\System32\msvcrt.dll: ungetwc()
+# 2 0x76A4551D in C:\Windows\System32\msvcrt.dll: sprintf()
+
+# 3 0x00427414 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: main() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (26):
+
+     24:     char * text = "";
+     25: 
+=>   26:     sprintf (text, "Amount: %d.", amount);
+     27: 
+     28:     MessageBox (NULL, text, "))", MB_ICONINFORMATION | MB_OK);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Фёдор\Downloads\TX\TXLib.h
+Compiled:	Nov 23 2019 11:43:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 23 2019 11:43:09
+
+Run file:	C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe
+Directory:	C:\Users\Фёдор\Documents\GitHub\Paint V2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76A4AE54 в функции ungetwc(). Попытка записать данные по адресу 0x004C2248. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300], Instance: 0x004FF2E4 (32-bit), Flags: Cmdre0, Thread: 0x28AC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76A4AE54 in C:\Windows\System32\msvcrt.dll: ungetwc()
+# 1 0x76A4B34E in C:\Windows\System32\msvcrt.dll: ungetwc()
+# 2 0x76A4551D in C:\Windows\System32\msvcrt.dll: sprintf()
+
+# 3 0x00427414 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: main() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (26):
+
+     24:     char * text = "";
+     25: 
+=>   26:     sprintf (text, "Amount: %d.", amount);
+     27: 
+     28:     MessageBox (NULL, text, "))", MB_ICONINFORMATION | MB_OK);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Фёдор\Downloads\TX\TXLib.h
+Compiled:	Nov 23 2019 11:43:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 23 2019 11:43:09
+
+Run file:	C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe
+Directory:	C:\Users\Фёдор\Documents\GitHub\Paint V2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe, файл: C:\Users\Фёдор\Downloads\TX\TXLib.h, строка: 11403, функция: bool {anonymous}::TX::txTextOut(double, double, const char*, HDC),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "text".
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300], Instance: 0x004FF2E4 (32-bit), Flags: CMdRe0, Thread: 0x15C0 (Main), GetLastError(): 160 (Неверны один или несколько аргументов). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041D6A7 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: txTextOut() at C:/Users/Фёдор/Downloads/TX/TXLib.h (11403)
+
+# 1 0x00427A10 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: draw() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Menu.h (118):
+
+    116:         txSetColor (textColor_, 0, dc_);
+    117:         txSelectFont (font_, 16, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  118:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    119: 
+    120:     }
+
+# 2 0x00427BB2 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: main() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (26):
+
+     24:     Menu menu = {350, 200, 100, 200, "TestMenu:", "Arial", "Comic Sans MS", RGB (45, 45, 45), TX_WHITE, RGB (30, 30, 30), TX_WHITE, TX_WHITE, txDC (), buttons};
+     25: 
+=>   26:     menu.draw ();
+     27: 
+     28: }
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTextOut(double, double, const char*, HDC) at C:\Users\Фёдор\Downloads\TX\TXLib.h (11403):
+
+  11401: bool txTextOut (double x, double y, const char text[], HDC dc /*= txDC()*/)
+  11402:     {
+=>11403: $1  if (_TX_ARGUMENT_FAILED    (text)) return false;
+  11404: $   if (_TX_DEFAULT_HDC_FAILED (dc))   return false;
+  11405: 
+
+# 1 in void Menu::draw() const at C:\Users\Фёдор\Documents\GitHub\Paint V2\Menu.h (118):
+
+    116:         txSetColor (textColor_, 0, dc_);
+    117:         txSelectFont (font_, 16, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  118:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    119: 
+    120:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Фёдор\Downloads\TX\TXLib.h
+Compiled:	Nov 23 2019 12:06:35, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 23 2019 12:06:38
+
+Run file:	C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe
+Directory:	C:\Users\Фёдор\Documents\GitHub\Paint V2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76169CC0 в функции strlen(). Попытка прочесть данные по адресу 0x00000320. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300], Instance: 0x005002E4 (32-bit), Flags: CMdRE0, Thread: 0x189C (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76169CC0 in C:\Windows\System32\msvcrt.dll: strlen()
+
+# 1 0x00427C0C in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: draw() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+# 2 0x00428D6E in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: menu() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (152):
+
+    150:     {
+    151: 
+=>  152:         m.draw ();
+    153:         m.check ();
+    154: 
+
+# 3 0x00428BD9 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: run() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (120):
+
+    118:         {
+    119: 
+=>  120:             menu (wWidth, wHeight, draw, use);
+    121: 
+    122:         }
+
+# 4 0x004289F2 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: main() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (44):
+
+     42:     {
+     43: 
+=>   44:         int result = run (wWidth, wHeight);
+     45: 
+     46:         if (result == ResultExit)
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTextOut(double, double, const char*, HDC) at C:\Users\Фёдор\Downloads\TX\TXLib.h (11406):
+
+  11404: $   if (_TX_DEFAULT_HDC_FAILED (dc))   return false;
+  11405: 
+=>11406: $   int len = (int) strlen (text);
+  11407: $   bool ok = txGDI (!!(Win32::TextOut (dc, ROUND (x), ROUND (y), text, len)), dc);
+  11408: 
+
+# 1 in void Menu::draw() const at C:\Users\Фёдор\Documents\GitHub\Paint V2\Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Фёдор\Downloads\TX\TXLib.h
+Compiled:	Nov 24 2019 15:19:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2019 15:20:02
+
+Run file:	C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe
+Directory:	C:\Users\Фёдор\Documents\GitHub\Paint V2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76169CC0 в функции strlen(). Попытка прочесть данные по адресу 0x00000320. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300], Instance: 0x005002E4 (32-bit), Flags: CMdRE0, Thread: 0x189C (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76169CC0 in C:\Windows\System32\msvcrt.dll: strlen()
+
+# 1 0x00427C0C in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: draw() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+# 2 0x00428D6E in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: menu() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (152):
+
+    150:     {
+    151: 
+=>  152:         m.draw ();
+    153:         m.check ();
+    154: 
+
+# 3 0x00428BD9 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: run() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (120):
+
+    118:         {
+    119: 
+=>  120:             menu (wWidth, wHeight, draw, use);
+    121: 
+    122:         }
+
+# 4 0x004289F2 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: main() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (44):
+
+     42:     {
+     43: 
+=>   44:         int result = run (wWidth, wHeight);
+     45: 
+     46:         if (result == ResultExit)
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTextOut(double, double, const char*, HDC) at C:\Users\Фёдор\Downloads\TX\TXLib.h (11406):
+
+  11404: $   if (_TX_DEFAULT_HDC_FAILED (dc))   return false;
+  11405: 
+=>11406: $   int len = (int) strlen (text);
+  11407: $   bool ok = txGDI (!!(Win32::TextOut (dc, ROUND (x), ROUND (y), text, len)), dc);
+  11408: 
+
+# 1 in void Menu::draw() const at C:\Users\Фёдор\Documents\GitHub\Paint V2\Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Фёдор\Downloads\TX\TXLib.h
+Compiled:	Nov 24 2019 15:19:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2019 15:20:02
+
+Run file:	C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe
+Directory:	C:\Users\Фёдор\Documents\GitHub\Paint V2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76169CC0 в функции strlen(). Попытка прочесть данные по адресу 0x00000320. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300], Instance: 0x005002E4 (32-bit), Flags: CMdRE0, Thread: 0x3258 (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76169CC0 in C:\Windows\System32\msvcrt.dll: strlen()
+
+# 1 0x00427C0C in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: draw() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+# 2 0x00428D6E in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: menu() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (152):
+
+    150:     {
+    151: 
+=>  152:         m.draw ();
+    153:         m.check ();
+    154: 
+
+# 3 0x00428BD9 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: run() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (120):
+
+    118:         {
+    119: 
+=>  120:             menu (wWidth, wHeight, draw, use);
+    121: 
+    122:         }
+
+# 4 0x004289F2 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: main() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (44):
+
+     42:     {
+     43: 
+=>   44:         int result = run (wWidth, wHeight);
+     45: 
+     46:         if (result == ResultExit)
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTextOut(double, double, const char*, HDC) at C:\Users\Фёдор\Downloads\TX\TXLib.h (11406):
+
+  11404: $   if (_TX_DEFAULT_HDC_FAILED (dc))   return false;
+  11405: 
+=>11406: $   int len = (int) strlen (text);
+  11407: $   bool ok = txGDI (!!(Win32::TextOut (dc, ROUND (x), ROUND (y), text, len)), dc);
+  11408: 
+
+# 1 in void Menu::draw() const at C:\Users\Фёдор\Documents\GitHub\Paint V2\Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Фёдор\Downloads\TX\TXLib.h
+Compiled:	Nov 24 2019 15:19:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2019 15:20:36
+
+Run file:	C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe
+Directory:	C:\Users\Фёдор\Documents\GitHub\Paint V2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76169CC0 в функции strlen(). Попытка прочесть данные по адресу 0x00000320. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300], Instance: 0x005002E4 (32-bit), Flags: CMdRE0, Thread: 0x3258 (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76169CC0 in C:\Windows\System32\msvcrt.dll: strlen()
+
+# 1 0x00427C0C in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: draw() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+# 2 0x00428D6E in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: menu() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (152):
+
+    150:     {
+    151: 
+=>  152:         m.draw ();
+    153:         m.check ();
+    154: 
+
+# 3 0x00428BD9 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: run() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (120):
+
+    118:         {
+    119: 
+=>  120:             menu (wWidth, wHeight, draw, use);
+    121: 
+    122:         }
+
+# 4 0x004289F2 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: main() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (44):
+
+     42:     {
+     43: 
+=>   44:         int result = run (wWidth, wHeight);
+     45: 
+     46:         if (result == ResultExit)
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTextOut(double, double, const char*, HDC) at C:\Users\Фёдор\Downloads\TX\TXLib.h (11406):
+
+  11404: $   if (_TX_DEFAULT_HDC_FAILED (dc))   return false;
+  11405: 
+=>11406: $   int len = (int) strlen (text);
+  11407: $   bool ok = txGDI (!!(Win32::TextOut (dc, ROUND (x), ROUND (y), text, len)), dc);
+  11408: 
+
+# 1 in void Menu::draw() const at C:\Users\Фёдор\Documents\GitHub\Paint V2\Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Фёдор\Downloads\TX\TXLib.h
+Compiled:	Nov 24 2019 15:19:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2019 15:20:36
+
+Run file:	C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe
+Directory:	C:\Users\Фёдор\Documents\GitHub\Paint V2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76169CC0 в функции strlen(). Попытка прочесть данные по адресу 0x00000320. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300], Instance: 0x005002E4 (32-bit), Flags: CMdRE0, Thread: 0x354C (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76169CC0 in C:\Windows\System32\msvcrt.dll: strlen()
+
+# 1 0x00427C0C in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: draw() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+# 2 0x00428D6E in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: menu() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (152):
+
+    150:     {
+    151: 
+=>  152:         m.draw ();
+    153:         m.check ();
+    154: 
+
+# 3 0x00428BD9 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: run() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (120):
+
+    118:         {
+    119: 
+=>  120:             menu (wWidth, wHeight, draw, use);
+    121: 
+    122:         }
+
+# 4 0x004289F2 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: main() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (44):
+
+     42:     {
+     43: 
+=>   44:         int result = run (wWidth, wHeight);
+     45: 
+     46:         if (result == ResultExit)
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTextOut(double, double, const char*, HDC) at C:\Users\Фёдор\Downloads\TX\TXLib.h (11406):
+
+  11404: $   if (_TX_DEFAULT_HDC_FAILED (dc))   return false;
+  11405: 
+=>11406: $   int len = (int) strlen (text);
+  11407: $   bool ok = txGDI (!!(Win32::TextOut (dc, ROUND (x), ROUND (y), text, len)), dc);
+  11408: 
+
+# 1 in void Menu::draw() const at C:\Users\Фёдор\Documents\GitHub\Paint V2\Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Фёдор\Downloads\TX\TXLib.h
+Compiled:	Nov 24 2019 15:19:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2019 15:21:52
+
+Run file:	C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe
+Directory:	C:\Users\Фёдор\Documents\GitHub\Paint V2
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x76169CC0 в функции strlen(). Попытка прочесть данные по адресу 0x00000320. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300], Instance: 0x005002E4 (32-bit), Flags: CMdRE0, Thread: 0x354C (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x76169CC0 in C:\Windows\System32\msvcrt.dll: strlen()
+
+# 1 0x00427C0C in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: draw() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+# 2 0x00428D6E in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: menu() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (152):
+
+    150:     {
+    151: 
+=>  152:         m.draw ();
+    153:         m.check ();
+    154: 
+
+# 3 0x00428BD9 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: run() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (120):
+
+    118:         {
+    119: 
+=>  120:             menu (wWidth, wHeight, draw, use);
+    121: 
+    122:         }
+
+# 4 0x004289F2 in C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe: main() at C:/Users/Фёдор/Documents/GitHub/Paint V2/Paint.cpp (44):
+
+     42:     {
+     43: 
+=>   44:         int result = run (wWidth, wHeight);
+     45: 
+     46:         if (result == ResultExit)
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTextOut(double, double, const char*, HDC) at C:\Users\Фёдор\Downloads\TX\TXLib.h (11406):
+
+  11404: $   if (_TX_DEFAULT_HDC_FAILED (dc))   return false;
+  11405: 
+=>11406: $   int len = (int) strlen (text);
+  11407: $   bool ok = txGDI (!!(Win32::TextOut (dc, ROUND (x), ROUND (y), text, len)), dc);
+  11408: 
+
+# 1 in void Menu::draw() const at C:\Users\Фёдор\Documents\GitHub\Paint V2\Menu.h (120):
+
+    118:         txSetColor (textColor_, 0, dc_);
+    119:         txSelectFont (font_, 21, -1, FW_DONTCARE, false, false, false, 0, dc_);
+=>  120:         txTextOut (x + 2, y + 2, buttons_[n].text_, dc_);
+    121: 
+    122:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 105, Date: 2019-11-21 00:00:00 +0300]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Фёдор\Downloads\TX\TXLib.h
+Compiled:	Nov 24 2019 15:19:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 24 2019 15:21:52
+
+Run file:	C:\Users\Фёдор\Documents\GitHub\Paint V2\Paint.exe
+Directory:	C:\Users\Фёдор\Documents\GitHub\Paint V2
+
+--------------------------------------------------
